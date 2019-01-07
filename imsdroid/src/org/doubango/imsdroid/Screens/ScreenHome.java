@@ -19,6 +19,7 @@
  */
 package org.doubango.imsdroid.Screens;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
@@ -32,6 +33,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.opengl.Visibility;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -706,8 +708,8 @@ public class ScreenHome extends BaseScreen {
 
 
         Button btnSIP = (Button) findViewById(R.id.BtnCall);
-        Button btnTextMessage = (Button) findViewById(R.id.BtnTextMessage);
-        Button btnBoard = (Button) findViewById(R.id.BtnBoard);
+        //Button btnTextMessage = (Button) findViewById(R.id.BtnTextMessage);
+        //Button btnBoard = (Button) findViewById(R.id.BtnBoard);
         Button btnDD = (Button) findViewById(R.id.BtnDD);
         Button btnLogin = (Button) findViewById(R.id.BtnLogin);
 
@@ -724,8 +726,8 @@ public class ScreenHome extends BaseScreen {
         layoutEdit.setVisibility(View.GONE);
 
         btnSIP.setTextColor(Color.BLUE);
-        btnTextMessage.setTextColor(Color.WHITE);
-        btnBoard.setTextColor(Color.WHITE);
+        //btnTextMessage.setTextColor(Color.WHITE);
+        //btnBoard.setTextColor(Color.WHITE);
         btnDD.setTextColor(Color.WHITE);
         btnLogin.setTextColor(Color.WHITE);
 
@@ -740,15 +742,15 @@ public class ScreenHome extends BaseScreen {
                 layoutEdit.setVisibility(View.GONE);
 
                 btnSIP.setTextColor(Color.BLUE);
-                btnTextMessage.setTextColor(Color.WHITE);
-                btnBoard.setTextColor(Color.WHITE);
+                //btnTextMessage.setTextColor(Color.WHITE);
+                //btnBoard.setTextColor(Color.WHITE);
                 btnDD.setTextColor(Color.WHITE);
                 btnLogin.setTextColor(Color.WHITE);
                 TextMessageToggle = 0;
             }
         });
 
-        btnBoard.setOnClickListener(new Button.OnClickListener() {
+        /*btnBoard.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 layoutDD.setVisibility(View.GONE);
@@ -799,7 +801,7 @@ public class ScreenHome extends BaseScreen {
                 btnDD.setTextColor(Color.WHITE);
                 btnLogin.setTextColor(Color.WHITE);
             }
-        });
+        });*/
 
         btnDD.setOnClickListener(new Button.OnClickListener() {
             @Override
@@ -812,8 +814,8 @@ public class ScreenHome extends BaseScreen {
                 layoutEdit.setVisibility(View.GONE);
 
                 btnSIP.setTextColor(Color.WHITE);
-                btnTextMessage.setTextColor(Color.WHITE);
-                btnBoard.setTextColor(Color.WHITE);
+                //btnTextMessage.setTextColor(Color.WHITE);
+                //btnBoard.setTextColor(Color.WHITE);
                 btnDD.setTextColor(Color.BLUE);
                 btnLogin.setTextColor(Color.WHITE);
 
@@ -832,8 +834,8 @@ public class ScreenHome extends BaseScreen {
                 layoutEdit.setVisibility(View.GONE);
 
                 btnSIP.setTextColor(Color.WHITE);
-                btnTextMessage.setTextColor(Color.WHITE);
-                btnBoard.setTextColor(Color.WHITE);
+                //btnTextMessage.setTextColor(Color.WHITE);
+                //btnBoard.setTextColor(Color.WHITE);
                 btnDD.setTextColor(Color.WHITE);
                 btnLogin.setTextColor(Color.BLUE);
 
@@ -1514,6 +1516,7 @@ public class ScreenHome extends BaseScreen {
         }
     }
 
+    @TargetApi(Build.VERSION_CODES.GINGERBREAD)
     public String GetKHBedCode(String pId, int Mode) {
         //Mode=1 病人轉換  Mode=2 護理站
         String newBedId = pId;
