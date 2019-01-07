@@ -6,15 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d066186f-dd63-4371-97ee-a805beb6878e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imsdroid/res/layout/screen_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/imsdroid/res/layout/screen_home.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imsdroid/src/org/doubango/imsdroid/Screens/ScreenHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/imsdroid/src/org/doubango/imsdroid/Screens/ScreenHome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/android-ngn-stack/android-ngn-stack.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/android-ngn-stack/android-ngn-stack.unaligned.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/imsdroid/imsdroid.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/imsdroid/imsdroid.unaligned.apk" beforeDir="false" />
-    </list>
+    <list default="true" id="d066186f-dd63-4371-97ee-a805beb6878e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imsdroid/src/org/doubango/imsdroid/Screens/ScreenHome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="1518" column="14" selection-start-line="1518" selection-start-column="5" selection-end-line="1518" selection-end-column="14" />
+            <state relative-caret-position="159">
+              <caret line="2066" column="29" lean-forward="true" selection-start-line="2066" selection-start-column="29" selection-end-line="2066" selection-end-column="29" />
               <folding>
                 <element signature="class#28376:29650" />
               </folding>
@@ -100,8 +92,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="135" />
-    <option name="y" value="104" />
+    <option name="x" value="248" />
+    <option name="y" value="128" />
     <option name="width" value="1266" />
     <option name="height" value="781" />
   </component>
@@ -541,8 +533,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="135" y="104" width="1266" height="781" extended-state="0" />
-    <editor active="true" />
+    <frame x="248" y="128" width="1266" height="781" extended-state="0" />
     <layout>
       <window_info id="Capture Tool" />
       <window_info content_ui="combo" id="Project" visible="true" weight="0.32924837" />
@@ -582,8 +573,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imsdroid/src/org/doubango/imsdroid/Screens/ScreenHome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="1518" column="14" selection-start-line="1518" selection-start-column="5" selection-end-line="1518" selection-end-column="14" />
+        <state relative-caret-position="159">
+          <caret line="2066" column="29" lean-forward="true" selection-start-line="2066" selection-start-column="29" selection-end-line="2066" selection-end-column="29" />
           <folding>
             <element signature="class#28376:29650" />
           </folding>
