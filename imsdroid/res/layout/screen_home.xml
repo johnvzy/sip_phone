@@ -44,22 +44,21 @@
 
             android:text="呼叫系統" />
 
-        <!--
         <Button
             android:id="@+id/BtnTextMessage"
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
 
-            android:text="待辦事項" /> -->
+            android:text="待辦事項" />
 
-        <!--<Button
+        <Button
             android:id="@+id/BtnBoard"
             android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="0.25"
 
-            android:text="護理白板" />-->
+            android:text="護理白板" />
 
         <Button
             android:id="@+id/BtnDD"

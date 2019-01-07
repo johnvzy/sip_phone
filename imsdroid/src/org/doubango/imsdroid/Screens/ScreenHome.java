@@ -1,22 +1,22 @@
 /* Copyright (C) 2010-2011, Mamadou Diop.
-*  Copyright (C) 2011, Doubango Telecom.
-*
-* Contact: Mamadou Diop <diopmamadou(at)doubango(dot)org>
-*	
-* This file is part of imsdroid Project (http://code.google.com/p/imsdroid)
-*
-* imsdroid is free software: you can redistribute it and/or modify it under the terms of 
-* the GNU General Public License as published by the Free Software Foundation, either version 3 
-* of the License, or (at your option) any later version.
-*	
-* imsdroid is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
-* without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
-* See the GNU General Public License for more details.
-*	
-* You should have received a copy of the GNU General Public License along 
-* with this program; if not, write to the Free Software Foundation, Inc., 
-* 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
-*/
+ *  Copyright (C) 2011, Doubango Telecom.
+ *
+ * Contact: Mamadou Diop <diopmamadou(at)doubango(dot)org>
+ *
+ * This file is part of imsdroid Project (http://code.google.com/p/imsdroid)
+ *
+ * imsdroid is free software: you can redistribute it and/or modify it under the terms of
+ * the GNU General Public License as published by the Free Software Foundation, either version 3
+ * of the License, or (at your option) any later version.
+ *
+ * imsdroid is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ */
 package org.doubango.imsdroid.Screens;
 
 import android.app.Activity;
@@ -158,7 +158,7 @@ public class ScreenHome extends BaseScreen {
     List<String> tipList = new ArrayList<String>();
     ArrayList<tipClass> tipObjList = new ArrayList<tipClass>();
 
-    public boolean isSafeExecute=true;
+    public boolean isSafeExecute = true;
 
     public ScreenHome() {
         super(SCREEN_TYPE.HOME_T, TAG);
@@ -199,10 +199,8 @@ public class ScreenHome extends BaseScreen {
         return myString.substring(start, Math.min(start + length, myString.length()));
     }
 
-    public void GetCallLog()
-    {
-        if (isSafeExecute==true)
-        {
+    public void GetCallLog() {
+        if (isSafeExecute == true) {
             new GetCallOperation(this).execute(LastRegBedId);
         }
     }
@@ -262,8 +260,7 @@ public class ScreenHome extends BaseScreen {
         return;
     }
 
-    public void InitiSpinnerIndex(Spinner sp,String gpName)
-    {
+    public void InitiSpinnerIndex(Spinner sp, String gpName) {
         if (gpName.length() >= 4) {
             String gp = msSubString(gpName, 4, 2);
             Log.v("綁定Group訊息:", gpName + ":" + gp);
@@ -303,9 +300,8 @@ public class ScreenHome extends BaseScreen {
         }
     }
 
-    public void ChangeWebView()
-    {
-        if (mWebView!=null) {
+    public void ChangeWebView() {
+        if (mWebView != null) {
             String postData = "";
             try {
                 postData = "Account=" + URLEncoder.encode("Admin", "UTF-8") + "&Password=" + URLEncoder.encode("1234", "UTF-8");
@@ -710,8 +706,8 @@ public class ScreenHome extends BaseScreen {
 
 
         Button btnSIP = (Button) findViewById(R.id.BtnCall);
-        //Button btnTextMessage = (Button) findViewById(R.id.BtnTextMessage);
-        //Button btnBoard = (Button) findViewById(R.id.BtnBoard);
+        Button btnTextMessage = (Button) findViewById(R.id.BtnTextMessage);
+        Button btnBoard = (Button) findViewById(R.id.BtnBoard);
         Button btnDD = (Button) findViewById(R.id.BtnDD);
         Button btnLogin = (Button) findViewById(R.id.BtnLogin);
 
@@ -728,8 +724,8 @@ public class ScreenHome extends BaseScreen {
         layoutEdit.setVisibility(View.GONE);
 
         btnSIP.setTextColor(Color.BLUE);
-        //btnTextMessage.setTextColor(Color.WHITE);
-        //btnBoard.setTextColor(Color.WHITE);
+        btnTextMessage.setTextColor(Color.WHITE);
+        btnBoard.setTextColor(Color.WHITE);
         btnDD.setTextColor(Color.WHITE);
         btnLogin.setTextColor(Color.WHITE);
 
@@ -744,15 +740,15 @@ public class ScreenHome extends BaseScreen {
                 layoutEdit.setVisibility(View.GONE);
 
                 btnSIP.setTextColor(Color.BLUE);
-                //btnTextMessage.setTextColor(Color.WHITE);
-                //btnBoard.setTextColor(Color.WHITE);
+                btnTextMessage.setTextColor(Color.WHITE);
+                btnBoard.setTextColor(Color.WHITE);
                 btnDD.setTextColor(Color.WHITE);
                 btnLogin.setTextColor(Color.WHITE);
                 TextMessageToggle = 0;
             }
         });
 
-        /*btnBoard.setOnClickListener(new Button.OnClickListener() {
+        btnBoard.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 layoutDD.setVisibility(View.GONE);
@@ -770,9 +766,9 @@ public class ScreenHome extends BaseScreen {
 
                 TextMessageToggle = 0;
             }
-        }); */
+        });
 
-        /*btnTextMessage.setOnClickListener(new Button.OnClickListener() {
+        btnTextMessage.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View v) {
                 layoutDD.setVisibility(View.GONE);
@@ -803,7 +799,7 @@ public class ScreenHome extends BaseScreen {
                 btnDD.setTextColor(Color.WHITE);
                 btnLogin.setTextColor(Color.WHITE);
             }
-        });*/
+        });
 
         btnDD.setOnClickListener(new Button.OnClickListener() {
             @Override
@@ -816,8 +812,8 @@ public class ScreenHome extends BaseScreen {
                 layoutEdit.setVisibility(View.GONE);
 
                 btnSIP.setTextColor(Color.WHITE);
-                //btnTextMessage.setTextColor(Color.WHITE);
-                //btnBoard.setTextColor(Color.WHITE);
+                btnTextMessage.setTextColor(Color.WHITE);
+                btnBoard.setTextColor(Color.WHITE);
                 btnDD.setTextColor(Color.BLUE);
                 btnLogin.setTextColor(Color.WHITE);
 
@@ -836,8 +832,8 @@ public class ScreenHome extends BaseScreen {
                 layoutEdit.setVisibility(View.GONE);
 
                 btnSIP.setTextColor(Color.WHITE);
-                //btnTextMessage.setTextColor(Color.WHITE);
-                //btnBoard.setTextColor(Color.WHITE);
+                btnTextMessage.setTextColor(Color.WHITE);
+                btnBoard.setTextColor(Color.WHITE);
                 btnDD.setTextColor(Color.WHITE);
                 btnLogin.setTextColor(Color.BLUE);
 
@@ -871,7 +867,7 @@ public class ScreenHome extends BaseScreen {
                 R.layout.spinnerlayout,
                 gpName);
         spGroup.setAdapter(gList);
-        InitiSpinnerIndex(spGroup,LastRegBedId);
+        InitiSpinnerIndex(spGroup, LastRegBedId);
         spGroup.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -1057,13 +1053,9 @@ public class ScreenHome extends BaseScreen {
 
         @Override
 
-        public void handleMessage(Message msg)
+        public void handleMessage(Message msg) {
 
-        {
-
-            switch (msg.what)
-
-            {
+            switch (msg.what) {
 
                 // 顯示網路上抓取的資料
 
@@ -1075,19 +1067,19 @@ public class ScreenHome extends BaseScreen {
 
                         result = (String) msg.obj;
 
-                    if (result != null)
-                    {
+                    if (result != null) {
                         // 印出網路回傳的文字
                         Toast.makeText(ScreenHome.this
                                 , result, Toast.LENGTH_LONG).show();
-                    if (mSipService.isRegistered() == false) {
-                        if (result.equals("")) {
-                            showAlert("綁定床號失敗", "無法存取Android Id");
-                        } else {
-                            showAlert("綁定床號成功", "床號：" + result);
-                            newSettingCommit(result);
+                        if (mSipService.isRegistered() == false) {
+                            if (result.equals("")) {
+                                showAlert("綁定床號失敗", "無法存取Android Id");
+                            } else {
+                                showAlert("綁定床號成功", "床號：" + result);
+                                newSettingCommit(result);
+                            }
                         }
-                    }}
+                    }
                     this.removeMessages(0);
                     //mHandler.removeMessages(0);
                     break;
@@ -1178,7 +1170,7 @@ public class ScreenHome extends BaseScreen {
                 public View getView(int position, View convertView, ViewGroup parent) {
                     View view = super.getView(position, convertView, parent);
                     TextView ListItemShow = (TextView) view.findViewById(android.R.id.text1);
-                    if (tipObjList.size()>0) {
+                    if (tipObjList.size() > 0) {
                         tipClass tmpObj = tipObjList.get(position);
                         ListItemShow.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
                         ListItemShow.setTextColor(Color.BLACK);
@@ -1395,9 +1387,7 @@ public class ScreenHome extends BaseScreen {
         String strTxt = null;
         // 建構子，設定要傳的字串
 
-        public sendPostRunnable(String strTxt)
-
-        {
+        public sendPostRunnable(String strTxt) {
 
             this.strTxt = strTxt;
 
@@ -1646,12 +1636,12 @@ public class ScreenHome extends BaseScreen {
         IdView.setText(LastRegBedId);
         writeLogFile(LastRegBedId, getApplicationContext());
         Spinner spGroup = (Spinner) findViewById(R.id.sGroup);
-        if (spGroup!=null){
-            InitiSpinnerIndex(spGroup,LastRegBedId);
+        if (spGroup != null) {
+            InitiSpinnerIndex(spGroup, LastRegBedId);
             spGroup.setEnabled(false);
         }
 
-        isKHPass=true;
+        isKHPass = true;
         BeginFunctionWork();
         GetBedListWork();
         GetTipWork();
@@ -1878,10 +1868,10 @@ public class ScreenHome extends BaseScreen {
                 ResponseHandler<String> responseHandler = new BasicResponseHandler();
                 Content = Client.execute(httpget, responseHandler);
                 /*
-                * [0]->BedId
-                * [1]->主護名稱
-                * [2]->主護號碼
-                */
+                 * [0]->BedId
+                 * [1]->主護名稱
+                 * [2]->主護號碼
+                 */
                 NursePhoneCode = Content.split("\\$")[2].toString();
                 NurseName = Content.split("\\$")[1].toString();
                 Log.v("NursePhoneCode=>", NursePhoneCode);
@@ -1954,12 +1944,12 @@ public class ScreenHome extends BaseScreen {
                 ResponseHandler<String> responseHandler = new BasicResponseHandler();
                 Content = Client.execute(httpget, responseHandler);
                 /*
-                * [0]->Sip Relam Ip
-                * [1]->Sip Server Ip
-                * [2]->Sip Server Port
-                * [3]->Sip Stun Ip
-                * [4]->Sip Stun Port
-                */
+                 * [0]->Sip Relam Ip
+                 * [1]->Sip Server Ip
+                 * [2]->Sip Server Port
+                 * [3]->Sip Stun Ip
+                 * [4]->Sip Stun Port
+                 */
                 CONFIG_SIP_SERVER_RELAMIP = Content.split(",")[0].toString();
                 CONFIG_SIP_SERVER_IP = Content.split(",")[1].toString();
                 CONFIG_SIP_SERVER_PORT = Content.split(",")[2].toString();
@@ -2056,7 +2046,7 @@ public class ScreenHome extends BaseScreen {
 
         protected void onPreExecute() {
             //
-            isSafeExecute=false;
+            isSafeExecute = false;
         }
 
         protected Void doInBackground(String... urls) {
@@ -2070,6 +2060,7 @@ public class ScreenHome extends BaseScreen {
                 if (Content.length() > 0) {
                     String[] token1 = Content.split("\\|");
                     for (String t1 : token1) {
+                        t1 += "1,2,3,4";
                         String[] token2 = t1.split(",");
                         callList.add(token2[1].toString() + "  於  " + token2[3].toString());
                         sClass tmpClass = new sClass(token2[0], token2[1], Integer.parseInt(token2[2]), token2[3]);
@@ -2083,13 +2074,13 @@ public class ScreenHome extends BaseScreen {
                 Error = e.getMessage();
                 cancel(true);
             }
-            isSafeExecute=true;
+            isSafeExecute = true;
             return null;
         }
 
         protected void onPostExecute(Void unused) {
             //
-            isSafeExecute=true;
+            isSafeExecute = true;
             activity.BindCall();
         }
     }
@@ -2146,8 +2137,8 @@ public class ScreenHome extends BaseScreen {
                         }
                     }
 
-                    Log.v("跑完Loop後tipList的數量:",Integer.toString(tipList.size()));
-                    Log.v("跑完Loop後tipObjList的數量:",Integer.toString(tipObjList.size()));
+                    Log.v("跑完Loop後tipList的數量:", Integer.toString(tipList.size()));
+                    Log.v("跑完Loop後tipObjList的數量:", Integer.toString(tipObjList.size()));
                 }
             } catch (ClientProtocolException e) {
                 Error = e.getMessage();
@@ -2248,7 +2239,7 @@ public class ScreenHome extends BaseScreen {
         }
 
         protected void onPreExecute() {
-            int i=0;
+            int i = 0;
         }
 
         protected Void doInBackground(String... urls) {
